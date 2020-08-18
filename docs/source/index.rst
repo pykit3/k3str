@@ -21,6 +21,7 @@ Functions
 ---------
 
 .. autofunction::  to_bytes
+.. autofunction::  to_utf8
 
 Indices and tables
 ==================

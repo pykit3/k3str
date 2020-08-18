@@ -51,7 +51,7 @@ def get_examples(pkg):
         with open("synopsis.txt", 'r') as f:
             return f.read()
 
-    rst =  '\n'.join(rst)
+    rst = '\n'.join(rst)
     return rst
 
 

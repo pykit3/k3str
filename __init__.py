@@ -1,12 +1,12 @@
 """
 k3str is a collection of string operation utilily.
 
->>> to_bytes('我')
-b'\xe6\x88\x91'
+>>> repr(to_bytes('我'))
+"b'\\\\xe6\\\\x88\\\\x91'"
 
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __name__ = "k3str"
 
 from .str_ext import (

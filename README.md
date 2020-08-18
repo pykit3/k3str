@@ -18,8 +18,8 @@ pip install k3str
 # Synopsis
 
 ```python
->>> to_bytes('我')
-b'æ'
+>>> repr(to_bytes('我'))
+"b'\\xe6\\x88\\x91'"
 ```
 
 #   Author

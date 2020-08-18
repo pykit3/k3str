@@ -4,7 +4,7 @@
 [![Documentation Status](https://readthedocs.org/projects/k3str/badge/?version=stable)](https://k3str.readthedocs.io/en/stable/?badge=stable)
 [![Package](https://img.shields.io/pypi/pyversions/k3str)](https://pypi.org/project/k3str)
 
-no desc
+k3str is a collection of string utilities.
 
 k3str is a component of [pykit3] project: a python3 toolkit set.
 

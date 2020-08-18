@@ -3,36 +3,24 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-this-package
+k3str
 ==========
 
-pykit3 is is a collection of toolkit in python3.
+.. automodule:: k3str
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-Documentation for the Code
-**************************
-
-.. automodule:: this-package
-
-
-Exceptions
-----------
-
-.. autoexception::  CalledProcessError
-.. autoexception::  ProcError
-.. autoexception::  TimeoutExpired
+.. contents::
+   :depth: 4
+   :local:
 
 
 Functions
 ---------
 
-.. autofunction::  command
-.. autofunction::  command_ex
-.. autofunction::  shell_script
-.. autofunction::  start_process
+.. autofunction::  to_bytes
 
 Indices and tables
 ==================

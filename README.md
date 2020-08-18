@@ -1,29 +1,25 @@
-# pk3proc
+# k3str
 
-[![Build Status](https://travis-ci.com/pykit3/pk3proc.svg?branch=master)](https://travis-ci.com/pykit3/pk3proc)
-[![Documentation Status](https://readthedocs.org/projects/pk3proc/badge/?version=stable)](https://pk3proc.readthedocs.io/en/stable/?badge=stable)
+[![Build Status](https://travis-ci.com/pykit3/k3str.svg?branch=master)](https://travis-ci.com/pykit3/k3str)
+[![Documentation Status](https://readthedocs.org/projects/k3str/badge/?version=stable)](https://k3str.readthedocs.io/en/stable/?badge=stable)
+[![Package](https://img.shields.io/pypi/pyversions/k3str)](https://pypi.org/project/k3str)
 
 no desc
+
+k3str is a component of [pykit3] project: a python3 toolkit set.
+
 
 # Install
 
 ```
-pip install pk3proc
+pip install k3str
 ```
 
 # Synopsis
 
 ```python
-import pk3proc
-
-# execute a shell script
-returncode, out, err = pk3proc.shell_script('ls / | grep bin')
-print returncode
-print out
-# output:
-# > 0
-# > bin
-# > sbin
+>>> to_bytes('我')
+b'æ'
 ```
 
 #   Author
@@ -35,3 +31,6 @@ Zhang Yanpo (张炎泼) <drdr.xp@gmail.com>
 The MIT License (MIT)
 
 Copyright (c) 2015 Zhang Yanpo (张炎泼) <drdr.xp@gmail.com>
+
+
+[pykit3]: https://github.com/pykit3

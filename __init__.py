@@ -1,29 +1,20 @@
 """
-package-name is utility to create sub process.
+k3str is a collection of string operation utilily.
 
-Execute a shell script::
-
-    import pk3proc
-
-    # execute a shell script
-
-    returncode, out, err = pk3proc.shell_script('ls / | grep bin')
-    print returncode
-    print out
-    # output:
-    # > 0
-    # > bin
-    # > sbin
-
-Run a command::
-
-    # Unlike the above snippet, following statement does not start an sh process.
-    returncode, out, err = pk3proc.command('ls', 'a*', cwd='/usr/local')
+>>> to_bytes('我')
+b'\xe6\x88\x91'
 
 """
 
-# from .proc import CalledProcessError
-# from .proc import ProcError
+__version__ = "0.1.0"
+__name__ = "k3str"
 
-__version__ = "0.2.2"
-_name = "pk3proc"
+from .str_ext import (
+        default_encoding, 
+        to_bytes, 
+)
+
+__all__ = [
+        'default_encoding', 
+        'to_bytes'
+]

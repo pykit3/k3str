@@ -1,7 +1,7 @@
 import unittest
 import doctest
-import pkgname
+import k3str
 
 def load_tests(loader, tests, ignore):
-    tests.addTests(doctest.DocTestSuite(pkgname))
+    tests.addTests(doctest.DocTestSuite(k3str))
     return tests

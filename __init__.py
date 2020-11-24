@@ -6,7 +6,7 @@ k3str is a collection of string operation utilily.
 
 """
 
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 __name__ = "k3str"
 
 from .str_ext import (

@@ -1,7 +1,7 @@
 import sys
 
 default_encoding = sys.getdefaultencoding()
-if hasattr(sys, 'getfilesystemencoding'):
+if hasattr(sys, "getfilesystemencoding"):
     default_encoding = sys.getfilesystemencoding()
 
 
@@ -10,7 +10,7 @@ def to_utf8(s):
     Convert str to utf8 bytes.
     It is an alias of ``to_bytes(s, encoding='utf-8')``.
     """
-    return to_bytes(s, encoding='utf-8')
+    return to_bytes(s, encoding="utf-8")
 
 
 def to_bytes(s, encoding=None):

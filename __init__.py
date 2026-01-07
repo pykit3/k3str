@@ -6,8 +6,9 @@ k3str is a collection of string operation utilily.
 
 """
 
-__version__ = "0.1.4"
-__name__ = "k3str"
+from importlib.metadata import version
+
+__version__ = version("k3str")
 
 from .str_ext import (
     default_encoding,
@@ -16,7 +17,7 @@ from .str_ext import (
 )
 
 __all__ = [
-    'default_encoding',
-    'to_bytes'
-    'to_utf8',
+    "default_encoding",
+    "to_bytes",
+    "to_utf8",
 ]

@@ -1,7 +1,8 @@
 import unittest
 
-import k3str
 import k3ut
+
+import k3str
 
 dd = k3ut.dd
 

@@ -20,11 +20,11 @@ pip install k3str
 import k3str
 
 # Convert string to bytes
-b = k3str.to_bytes('我')
+b = k3str.to_bytes("我")
 print(repr(b))  # b'\xe6\x88\x91'
 
 # Convert to UTF-8 bytes
-utf8_bytes = k3str.to_utf8('hello')
+utf8_bytes = k3str.to_utf8("hello")
 
 # Get default encoding
 print(k3str.default_encoding)

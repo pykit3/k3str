@@ -13,7 +13,7 @@ def to_utf8(s):
     return to_bytes(s, encoding="utf-8")
 
 
-def to_bytes(s, encoding=None):
+def to_bytes(s, encoding=None) -> bytes:
     """
     Convert str to bytes.  If it is already bytes, do nothing.
 

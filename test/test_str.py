@@ -74,6 +74,18 @@ class TestStr(unittest.TestCase):
             rst = k3str.to_bytes(b, encoding)
             self.assertIs(b, rst)
 
+    def test_to_bytes_bytes_like(self):
+        # bytearray equals bytes with the same content, so the type is checked too.
+        cases = (
+            bytearray(b"\xff\xfe"),
+            memoryview(b"\xff\xfe"),
+        )
+
+        for inp in cases:
+            rst = k3str.to_bytes(inp)
+            self.assertIs(bytes, type(rst))
+            self.assertEqual(b"\xff\xfe", rst)
+
     def test_to_bytes_object(self):
         class Obj:
             def __str__(self):

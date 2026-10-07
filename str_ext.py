@@ -16,9 +16,10 @@ def to_utf8(s):
 def to_bytes(s, encoding=None) -> bytes:
     """
     Convert str to bytes.  If it is already bytes, do nothing.
+    A ``bytearray`` or ``memoryview`` is copied into bytes.
 
     Args:
-        s(str | bytes): the value to convert.
+        s(str | bytes | bytearray | memoryview): the value to convert.
 
         encoding(str):
             the encoding to encode str.
@@ -33,6 +34,9 @@ def to_bytes(s, encoding=None) -> bytes:
 
     if isinstance(s, bytes):
         return s
+
+    if isinstance(s, (bytearray, memoryview)):
+        return bytes(s)
 
     if isinstance(s, str):
         return bytes(s, encoding)

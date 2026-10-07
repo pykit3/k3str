@@ -18,8 +18,7 @@ def to_bytes(s, encoding=None) -> bytes:
     Convert str to bytes.  If it is already bytes, do nothing.
 
     Args:
-
-        s: str or bytes
+        s(str | bytes): the value to convert.
 
         encoding(str):
             the encoding to encode str.

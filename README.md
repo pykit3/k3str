@@ -1,12 +1,20 @@
 # k3str
 
-[![Build Status](https://github.com/pykit3/k3str/actions/workflows/python-package.yml/badge.svg)](https://github.com/pykit3/k3str/actions/workflows/python-package.yml)
+[![Action-CI](https://github.com/pykit3/k3str/actions/workflows/python-package.yml/badge.svg)](https://github.com/pykit3/k3str/actions/workflows/python-package.yml)
 [![Documentation Status](https://readthedocs.org/projects/k3str/badge/?version=stable)](https://k3str.readthedocs.io/en/stable/?badge=stable)
 [![Package](https://img.shields.io/pypi/pyversions/k3str)](https://pypi.org/project/k3str)
 
 k3str is a collection of string utilities.
 
 k3str is a component of [pykit3] project: a python3 toolkit set.
+
+
+k3str is a collection of string operation utilities.
+
+    >>> repr(to_bytes('我'))
+    "b'\\xe6\\x88\\x91'"
+
+
 
 
 # Install

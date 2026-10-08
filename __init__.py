@@ -1,8 +1,8 @@
 """
-k3str is a collection of string operation utilily.
+k3str is a collection of string operation utilities.
 
->>> repr(to_bytes('我'))
-"b'\\\\xe6\\\\x88\\\\x91'"
+    >>> repr(to_bytes('我'))
+    "b'\\\\xe6\\\\x88\\\\x91'"
 
 """
 

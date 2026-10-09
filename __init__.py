@@ -6,10 +6,6 @@ k3str is a collection of string operation utilities.
 
 """
 
-from importlib.metadata import version
-
-__version__ = version("k3str")
-
 from .str_ext import (
     default_encoding,
     to_bytes,
@@ -21,3 +17,14 @@ __all__ = [
     "to_bytes",
     "to_utf8",
 ]
+
+
+def __getattr__(name: str) -> str:
+    # importlib.metadata takes about 20 ms to import, so it is loaded only
+    # when __version__ is read
+    if name != "__version__":
+        raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+
+    from importlib.metadata import version
+
+    return version("k3str")

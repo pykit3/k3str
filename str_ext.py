@@ -1,11 +1,9 @@
 import sys
 
-default_encoding = sys.getdefaultencoding()
-if hasattr(sys, "getfilesystemencoding"):
-    default_encoding = sys.getfilesystemencoding()
+default_encoding = sys.getfilesystemencoding()
 
 
-def to_utf8(s):
+def to_utf8(s: object) -> bytes:
     """
     Convert str to utf8 bytes.
     It is an alias of ``to_bytes(s, encoding='utf-8')``.
@@ -13,7 +11,7 @@ def to_utf8(s):
     return to_bytes(s, encoding="utf-8")
 
 
-def to_bytes(s, encoding=None) -> bytes:
+def to_bytes(s: object, encoding: str | None = None) -> bytes:
     """
     Convert str to bytes.  If it is already bytes, do nothing.
     A ``bytearray`` or ``memoryview`` is copied into bytes.

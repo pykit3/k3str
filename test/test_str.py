@@ -86,6 +86,11 @@ class TestStr(unittest.TestCase):
             self.assertIs(bytes, type(rst))
             self.assertEqual(b"\xff\xfe", rst)
 
+        # A strided slice is not contiguous; only its items are copied.
+        rst = k3str.to_bytes(memoryview(b"abcdef")[::2])
+        self.assertIs(bytes, type(rst))
+        self.assertEqual(b"ace", rst)
+
     def test_to_bytes_object(self):
         class Obj:
             def __str__(self):
@@ -99,6 +104,19 @@ class TestStr(unittest.TestCase):
         for encoding, want in cases:
             rst = k3str.to_bytes(Obj(), encoding)
             self.assertEqual(want, rst)
+
+    def test_to_bytes_object_str_raises(self):
+        class Err(Exception):
+            pass
+
+        class Obj:
+            def __str__(self):
+                raise Err("no str")
+
+        with self.assertRaises(Err) as ctx:
+            k3str.to_bytes(Obj())
+
+        self.assertEqual(("no str",), ctx.exception.args)
 
     def test_to_bytes_invalid_encoding(self):
         cases = (
